@@ -1,0 +1,9 @@
+---
+- hosts: dns
+  become: yes
+  roles:
+    - role: bertvv.bind
+    - role: bertvv.rh-base
+  vars_files:
+    - "../vars/dns.yml"
+    - "../vars/rh-base.yml"

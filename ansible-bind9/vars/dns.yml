@@ -1,0 +1,26 @@
+---
+rhbase_firewall_allow_services:
+  - dns
+bind_allow_query:
+  - '10.0.0.0/8'
+  - '172.16.0.0/12'
+  - '192.168.0.0/16'
+  - '100.64.0.0/10'
+bind_listen_ipv4:
+  - any
+bind_dns_keys:
+  - name: rndc_key
+    algorithm: hmac-sha256
+    secret: "1v0XeqyWlU8h3zUfqsRPBTtu2Q0v5JCwwYS3238eCZI="
+bind_allow_transfer:
+  - "100.64.100.0/24"
+bind_forwarders:
+  - "1.1.1.1"
+  - "8.8.8.8"
+  - "9.9.9.9"
+bind_recursion: true
+bind_zone_dir: [ '/var/named/zones' ]
+bind_dnssec_enable: false
+bind_dnssec_validation: false
+bind_extra_include_files:
+  - "/etc/rndc.key"
