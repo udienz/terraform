@@ -1,0 +1,19 @@
+---
+bind_zones:
+  - name: mahyuddin.xyz
+    create_reverse_zones: true
+    primaries:
+      - 100.64.10.131
+    type: primary
+    allow_update:
+      - "key tsig-key."
+    name_servers:
+      - dns1.mahyuddin.xyz.
+      - dns2.mahyuddin.xyz.
+    hosts:
+      - name: dns1
+        ip: 100.64.10.131
+      - name: dns2
+        ip: 100.64.10.129
+    networks:
+      - '100.64'
