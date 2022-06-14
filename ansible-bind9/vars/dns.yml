@@ -8,12 +8,14 @@ bind_allow_query:
   - '100.64.0.0/10'
 bind_listen_ipv4:
   - any
+
 bind_dns_keys:
-  - name: rndc_key
+  - name: "tsig-key."
     algorithm: hmac-sha256
-    secret: "1v0XeqyWlU8h3zUfqsRPBTtu2Q0v5JCwwYS3238eCZI="
+    secret: "Yfr4AfgMgfDS1BUf4dpbua2hSea99spQVnnbvAJfL5g="
+
 bind_allow_transfer:
-  - "100.64.100.0/24"
+  - "100.64.10.0/24"
 bind_forwarders:
   - "1.1.1.1"
   - "8.8.8.8"
@@ -23,4 +25,4 @@ bind_zone_dir: [ '/var/named/zones' ]
 bind_dnssec_enable: false
 bind_dnssec_validation: false
 bind_extra_include_files:
-  - "/etc/rndc.key"
+  - "/etc/named/auth_transfer.conf"

@@ -1,18 +1,21 @@
 ---
+rhbase_firewall_allow_ports:
+  - 953/tcp
+  - 953/udp
 rhbase_firewall_allow_services:
-  - 53/udp
-  - 22/tcp
+  - dns
+  - ssh
 rhbase_firewall_interfaces:
   - eth0
 rhbase_start_services:
   - sshd
-  - named
 rhbase_install_packages:
   - vim-enhanced
   - less
   - bind-utils
   - whois
-  - byobu
+  - selinux-policy-targeted
+  - policycoreutils
 rhbase_hosts_entry: true
 rhbase_automatic_updates: true
 rhbase_updates_type: security
@@ -21,3 +24,5 @@ rhbase_updates_apply: true
 rhbase_updates_download: true
 rhbase_yum_cron_hourly_install_updates: true
 rhbase_yum_cron_hourly_update_level: security
+rhbase_repositories: epel-release
+rhbase_tz: "Asia/Jakarta"
