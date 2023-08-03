@@ -1,3 +1,0 @@
-[dns]
-dns1 ansible_host=100.64.10.131
-dns2 ansible_host=100.64.10.129

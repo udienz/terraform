@@ -1,8 +1,0 @@
----
-bind_zones:
-  - name: mahyuddin.xyz
-    primaries:
-      - 100.64.10.131
-    name_servers:
-      - dns1.mahyuddin.xyz.
-      - dns2.mahyuddin.xyz.

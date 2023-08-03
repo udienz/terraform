@@ -1,9 +1,0 @@
----
-- name: set dns servers
-  community.general.nmcli:
-    conn_name: eth0
-    type: ethernet
-    dns4:
-      - 8.8.8.8
-      - 1.1.1.1
-    state: present
