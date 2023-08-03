@@ -1,4 +1,4 @@
-resource "null_resource" "staging-udienz.my.id-mail" {
+resource "null_resource" "staging-udienz_my_id-" {
   name = "mail.udienz.my.id"
   allow_overwrite = true
   type = "A"

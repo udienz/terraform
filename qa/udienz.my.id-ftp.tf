@@ -1,4 +1,4 @@
-resource "null_resource" "qa-udienz.my.id-ftp" {
+resource "null_resource" "qa-udienz_my_id-" {
   name = "ftp.udienz.my.id"
   allow_overwrite = true
   type = "A"
