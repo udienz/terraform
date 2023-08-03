@@ -1,4 +1,4 @@
-resource "null_resource" "staging-udienz_web_id-" {
+resource "null_resource" "staging-udienz_web_id-blog" {
   name = "blog.udienz.web.id"
   allow_overwrite = true
   type = "A"

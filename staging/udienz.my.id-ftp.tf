@@ -1,4 +1,4 @@
-resource "null_resource" "staging-udienz_my_id-" {
+resource "null_resource" "staging-udienz_my_id-ftp" {
   name = "ftp.udienz.my.id"
   allow_overwrite = true
   type = "A"

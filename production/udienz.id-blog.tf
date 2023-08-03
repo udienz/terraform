@@ -1,4 +1,4 @@
-resource "null_resource" "production-udienz_id-" {
+resource "null_resource" "production-udienz_id-blog" {
   name = "blog.udienz.id"
   allow_overwrite = true
   type = "A"
